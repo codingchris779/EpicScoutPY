@@ -1,18 +1,5 @@
-{% if latest_team_list %}
-    <form action="info/" method="get">
-    <fieldset>
-    <select id="num">
-        {% for team in latest_team_list %}
-            <option value="{{ team.TeamNum }}" >{{ team.TeamNum }}</option>
-        {% endfor %}
-    </select>
-    <select id="side">
-        <option value="true">red<option>
-        <option value="false">blue<option>
-    </select>
+<form action="info/" method="get">
+    {% csrf_token %}
+    {{ form }}
     <input type="submit" value="Submit">
-    </fieldset>
-    </form>
-{% else %}
-    <p> Can't find any teams go yell at Chris or Ethan </p>
-{% endif %}
+</form>

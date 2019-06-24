@@ -3,12 +3,11 @@ from django.shortcuts import render
 # Create your views here.
 from django.http import HttpResponse, HttpResponseRedirect
 from django.http import Http404
-from django.shortcuts import render
 
 from django.shortcuts import get_object_or_404, render
-from django.urls import reverse
 
-from .models import Choice, Question, Team, Info
+from .models import Choice, Question
+from .forms import InfoForm
 
 
 def results(request, question_id):
@@ -17,9 +16,13 @@ def results(request, question_id):
 
 
 def index(request):
-    latest_team_list = Team.objects.order_by('-TeamNum')[:30]
-    context = {'latest_team_list': latest_team_list}
-    return render(request, 'scout/index.html', context)
+    if request.method == 'POST':
+        form = InfoForm(request.POST)
+        if form.is_valid():
+            return HttpResponseRedirect('/detail/')
+    else:
+        form = InfoForm()
+    return render(request, 'scout/index.html', {'form': form})
 
 
 def detail(request, question_id):
@@ -29,13 +32,14 @@ def detail(request, question_id):
         raise Http404("Question does not exist")
     return render(request, 'scout/detail.html', {'question': question})
 
-
-def vote(request):
-    info = Info()
-    info.Team = get_object_or_404(Team, pk=request.GET["num"])
-    if request.GET['side'] == "red":
-        info.isRed = True
-    else:
-        info.isRed = False
-    info.MatchNum = 0
-
+#
+# def vote(request):
+#     if request.method == 'POST':
+#         form = InfoForm(request.POST)
+#         if form.is_valid():
+#             return HttpResponseRedirect('/detail/')
+#     else:
+#         form = InfoForm()
+#     return render(request, index.html)
+#
+#
