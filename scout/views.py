@@ -8,7 +8,7 @@ from django.shortcuts import render
 from django.shortcuts import get_object_or_404, render
 from django.urls import reverse
 
-from .models import Choice, Question
+from .models import Choice, Question, Team, Info
 
 
 def results(request, question_id):
@@ -17,8 +17,8 @@ def results(request, question_id):
 
 
 def index(request):
-    latest_question_list = Question.objects.order_by('-pub_date')[:5]
-    context = {'latest_question_list': latest_question_list}
+    latest_team_list = Team.objects.order_by('-TeamNum')[:30]
+    context = {'latest_team_list': latest_team_list}
     return render(request, 'scout/index.html', context)
 
 
@@ -30,20 +30,12 @@ def detail(request, question_id):
     return render(request, 'scout/detail.html', {'question': question})
 
 
-def vote(request, question_id):
-    question = get_object_or_404(Question, pk=question_id)
-    try:
-        selected_choice = question.choice_set.get(pk=request.POST['choice'])
-    except (KeyError, Choice.DoesNotExist):
-        # Redisplay the question voting form.
-        return render(request, 'scout/detail.html', {
-            'question': question,
-            'error_message': "You didn't select a choice.",
-        })
+def vote(request):
+    info = Info()
+    info.Team = get_object_or_404(Team, pk=request.GET["num"])
+    if request.GET['side'] == "red":
+        info.isRed = True
     else:
-        selected_choice.votes += 1
-        selected_choice.save()
-        # Always return an HttpResponseRedirect after successfully dealing
-        # with POST data. This prevents data from being posted twice if a
-        # user hits the Back button.
-        return HttpResponseRedirect(reverse('scout:results', args=(question.id,)))
+        info.isRed = False
+    info.MatchNum = 0
+

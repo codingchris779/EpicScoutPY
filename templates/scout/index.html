@@ -1,9 +1,18 @@
-{% if latest_question_list %}
-    <ul>
-    {% for question in latest_question_list %}
-       <li><a href="{% url 'scout:detail' question.id %}">{{ question.question_text }}</a></li>
-    {% endfor %}
-    </ul>
+{% if latest_team_list %}
+    <form action="info/" method="get">
+    <fieldset>
+    <select id="num">
+        {% for team in latest_team_list %}
+            <option value="{{ team.TeamNum }}" >{{ team.TeamNum }}</option>
+        {% endfor %}
+    </select>
+    <select id="side">
+        <option value="true">red<option>
+        <option value="false">blue<option>
+    </select>
+    <input type="submit" value="Submit">
+    </fieldset>
+    </form>
 {% else %}
-    <p>No polls are available.</p>
+    <p> Can't find any teams go yell at Chris or Ethan </p>
 {% endif %}
