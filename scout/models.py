@@ -17,7 +17,7 @@ class Info(models.Model):
     isRed = models.fields.BooleanField
 
     def __str__(self):
-        return self.Team.TeamNum
+        return "hi"
 
 
 class Question(models.Model):

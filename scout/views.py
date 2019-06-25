@@ -6,40 +6,25 @@ from django.http import Http404
 
 from django.shortcuts import get_object_or_404, render
 
-from .models import Choice, Question
+from .models import Choice, Question, Info, Team
 from .forms import InfoForm
 
 
-def results(request, question_id):
-    question = get_object_or_404(Question, pk=question_id)
-    return render(request, 'scout/results.html', {'question': question})
+def match_data(request, info):
+    return HttpResponse(str(info))
 
 
 def index(request):
     if request.method == 'POST':
         form = InfoForm(request.POST)
         if form.is_valid():
-            return HttpResponseRedirect('/detail/')
+            i = Info()
+            i.Team = get_object_or_404(Team, id=form.cleaned_data['team'])
+            i.MatchNum = form.cleaned_data['round']
+            i.isRed = bool(form.cleaned_data['side'])
+            i.save()
+            return HttpResponseRedirect('match-data/'+str(i.id))
     else:
         form = InfoForm()
     return render(request, 'scout/index.html', {'form': form})
 
-
-def detail(request, question_id):
-    try:
-        question = Question.objects.get(pk=question_id)
-    except Question.DoesNotExist:
-        raise Http404("Question does not exist")
-    return render(request, 'scout/detail.html', {'question': question})
-
-#
-# def vote(request):
-#     if request.method == 'POST':
-#         form = InfoForm(request.POST)
-#         if form.is_valid():
-#             return HttpResponseRedirect('/detail/')
-#     else:
-#         form = InfoForm()
-#     return render(request, index.html)
-#
-#
