@@ -6,12 +6,34 @@ from django.http import Http404
 
 from django.shortcuts import get_object_or_404, render
 
-from .models import Choice, Question, Info, Team
-from .forms import InfoForm
+from .models import Info, Team, Match, TeamMatch
+from .forms import InfoForm, MatchForm
 
 
 def match_data(request, info):
-    return HttpResponse(str(info))
+    if request.method == 'POST':
+        form = MatchForm(request.POST)
+        if form.is_valid():
+            m = TeamMatch()
+            i = get_object_or_404(Info, id=info)
+            m.info = i
+            m.Did_They_Run = bool(form.cleaned_data['Did_They_Run'])
+            m.Claiming = bool(form.cleaned_data['Claiming'])
+            m.Comments = form.cleaned_data['Comments']
+            m.Depot = int(form.cleaned_data['Depot'])
+            m.Endgame = form.cleaned_data['Endgame']
+            m.Gold_In_Cargo = int(form.cleaned_data['Gold_In_Cargo'])
+            m.Silver_In_Cargo = int(form.cleaned_data['Silver_In_Cargo'])
+            m.How_Many_Seconds_Were_They_Broke = int(form.cleaned_data['How_Many_Seconds_Were_They_Broke'])
+            m.Landing = bool(form.cleaned_data['Landing'])
+            m.Park = bool(form.cleaned_data['Park'])
+            m.Penalties = int(form.cleaned_data['Penalties'])
+            m.Sampling = bool(form.cleaned_data['Sampling'])
+            m.save()
+            return HttpResponseRedirect('/')
+    else:
+        form = MatchForm()
+    return render(request, 'scout/match-data.html', {'form': form})
 
 
 def index(request):
@@ -28,3 +50,12 @@ def index(request):
         form = InfoForm()
     return render(request, 'scout/index.html', {'form': form})
 
+
+def matches_for_view(request):
+    matches = TeamMatch.objects.all()
+    return render(request, 'scout/matches.html', {'matches': matches})
+
+
+def clean_matches_for_view(request):
+    matches = TeamMatch.objects.all()
+    return render(request, 'scout/matches.html', {'matches': matches})
