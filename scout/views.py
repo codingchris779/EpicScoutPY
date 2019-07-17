@@ -1,6 +1,6 @@
 from django.shortcuts import render
-
-# Create your views here.
+#
+# # Create your views here.
 from django.http import HttpResponse, HttpResponseRedirect
 from django.http import Http404
 
@@ -45,7 +45,7 @@ def index(request):
             i.MatchNum = form.cleaned_data['round']
             i.isRed = bool(form.cleaned_data['side'])
             i.save()
-            return HttpResponseRedirect('match-data/'+str(i.id))
+            return HttpResponseRedirect('match-data/'+str(i.id()))
     else:
         form = InfoForm()
     return render(request, 'scout/index.html', {'form': form})
@@ -59,3 +59,5 @@ def matches_for_view(request):
 def clean_matches_for_view(request):
     matches = TeamMatch.objects.all()
     return render(request, 'scout/matches.html', {'matches': matches})
+
+

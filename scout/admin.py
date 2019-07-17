@@ -9,5 +9,3 @@ from .models import Match
 admin.site.register(Team)
 admin.site.register(Info)
 admin.site.register(Match)
-admin.site.register(TeamMatch)
-
