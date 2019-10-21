@@ -18,29 +18,28 @@ class Info(models.Model):
     isRed = models.fields.BooleanField
 
     def __str__(self):
-        return "hi"
+        return "Hi!"
 
 
-class TeamMatch(models.Model):
+class SkystoneMatch(models.Model):
     info = models.OneToOneField(Info, on_delete=models.CASCADE, primary_key=False, default='')
     Did_They_Run = models.BooleanField(default=False)
-    Landing = models.BooleanField(default=False)
-    Sampling = models.BooleanField(default=False)
-    Claiming = models.BooleanField(default=False)
-    Park = models.BooleanField(default=False)
-    Gold_In_Cargo = models.IntegerField(default='0')
-    Silver_In_Cargo = models.IntegerField(default='0')
-    Depot = models.IntegerField(default='0')
-    How_Many_Seconds_Were_They_Broke = models.IntegerField(default='0')
-    Endgame = models.CharField(max_length=5, default='3')
-    Penalties = models.IntegerField(default='0')
-    Comments = models.CharField(max_length=500, default='lols')
+
+    AUTO_Stones_Across = models.IntegerField(default='0')
+    AUTO_SS_Across = models.IntegerField(default='0')
+    AUTO_Parking = models.BooleanField(default=False)
+    Stones_Across = models.IntegerField(default='0', help_text="Enter total (including auto) number of stones moved.")
+    Stones_Placed = models.IntegerField(default='0')
+    Tallest_Stack = models.IntegerField(default='0')
+    END_TM_Height = models.IntegerField(default='0')
+    END_Parking = models.BooleanField(default=False)
+    Broken_Time = models.IntegerField(default='0', null=True, blank=True)
+    Comments = models.CharField(max_length=500, default='n/a')
 
 
 class Match(models.Model):
     MatchNum = models.IntegerField
-    rd = TeamMatch()
-    rc = TeamMatch()
-    bd = TeamMatch()
-    bc = TeamMatch()
-
+    rf = SkystoneMatch()  # redFront
+    rb = SkystoneMatch()  # redBack
+    bf = SkystoneMatch()  # blueFront
+    bb = SkystoneMatch()  # blueBack

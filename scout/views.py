@@ -6,7 +6,7 @@ from django.http import Http404
 
 from django.shortcuts import get_object_or_404, render
 
-from .models import Info, Team, Match, TeamMatch
+from .models import Info, Team, Match, SkystoneMatch
 from .forms import InfoForm, MatchForm
 
 
@@ -14,7 +14,7 @@ def match_data(request, info):
     if request.method == 'POST':
         form = MatchForm(request.POST)
         if form.is_valid():
-            m = TeamMatch()
+            m = SkystoneMatch()
             i = get_object_or_404(Info, id=info)
             m.info = i
             m.Did_They_Run = bool(form.cleaned_data['Did_They_Run'])
@@ -52,12 +52,12 @@ def index(request):
 
 
 def matches_for_view(request):
-    matches = TeamMatch.objects.all()
+    matches = SkystoneMatch.objects.all()
     return render(request, 'scout/matches.html', {'matches': matches})
 
 
 def clean_matches_for_view(request):
-    matches = TeamMatch.objects.all()
+    matches = SkystoneMatch.objects.all()
     return render(request, 'scout/matches.html', {'matches': matches})
 
 
