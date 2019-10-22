@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9b11f1dd-77e9-4f9e-96be-148cd3d57593" name="Default Changelist" comment="added base_generic.html file, modified idex.html to use it">
+    <list default="true" id="9b11f1dd-77e9-4f9e-96be-148cd3d57593" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EpicScoutPY/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/EpicScoutPY/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EpicScoutPY/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/EpicScoutPY/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scout/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/scout/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scout/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/scout/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scout/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/scout/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scout/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/scout/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scout/base_generic.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base_generic.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scout/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/scout/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -47,7 +43,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scout/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="401">
+            <state relative-caret-position="172">
               <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
@@ -57,10 +53,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/templates/scout/base_generic.html">
+        <entry file="file://$PROJECT_DIR$/templates/scout/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="20" lean-forward="true" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
+            <state relative-caret-position="136">
+              <caret line="8" column="52" lean-forward="true" selection-start-line="8" selection-start-column="52" selection-end-line="8" selection-end-column="52" />
+              <folding>
+                <element signature="n#style#0;n#div#1;n#body#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/base_generic.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="356">
+              <caret line="32" column="10" selection-start-line="32" selection-start-column="10" selection-end-line="32" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -132,6 +140,7 @@
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
+        <option value="aCodingTurtle &lt;ethan.astifan@gmail.com&gt;" />
         <option value="aCodingTurtle" />
       </list>
     </option>
@@ -159,13 +168,14 @@
         <option value="$PROJECT_DIR$/scout/views.py" />
         <option value="$PROJECT_DIR$/manage.py" />
         <option value="$PROJECT_DIR$/scout/forms.py" />
-        <option value="$PROJECT_DIR$/templates/scout/index.html" />
         <option value="$PROJECT_DIR$/templates/scout/base_generic.html" />
         <option value="$PROJECT_DIR$/EpicScoutPY/urls.py" />
         <option value="$PROJECT_DIR$/scout/urls.py" />
         <option value="$PROJECT_DIR$/EpicScoutPY/settings.py" />
         <option value="$PROJECT_DIR$/scout/models.py" />
         <option value="$PROJECT_DIR$/scout/admin.py" />
+        <option value="$PROJECT_DIR$/templates/base_generic.html" />
+        <option value="$PROJECT_DIR$/templates/scout/index.html" />
       </list>
     </option>
   </component>
@@ -226,6 +236,8 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\easti\PycharmProjects\EpicScoutPY\templates\scout" />
+      <recent name="C:\Users\easti\PycharmProjects\EpicScoutPY\templates" />
       <recent name="C:\Users\Christopher McKenzie\PycharmProjects\EpicScoutPY\scout" />
     </key>
   </component>
@@ -372,7 +384,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571272539110</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="- added base_generic.html file, modified index.html to use it&#10;- modified the models to better reflect the season">
+      <created>1571701766921</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1571701766921</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -380,22 +399,21 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="0" width="783" height="832" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.270415" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.270415" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32857144" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4953765" visible="true" weight="0.3266762" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4953765" visible="true" weight="0.3266762" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32956153" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32952926" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.25067025" side_tool="true" weight="0.32531825" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.25067025" side_tool="true" weight="0.32524964" />
       <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.74932975" weight="0.32524964" />
       <window_info anchor="bottom" id="Python Console" order="12" sideWeight="0.49731904" weight="0.32673267" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -445,6 +463,32 @@
       </list>
     </option>
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="some cool new stuff" />
     <MESSAGE value="Got the basic data structure working and coded even if it only makes sense in my twisted mind. Currenly working on getting forms to work. Trying to get index to send the form to info/ or vote in the views.py from there it should create a info object and send it's id to the next page which will be where the match data is enetered. requests are hard also NOTE that CSRF tokens are annoying" />
@@ -454,7 +498,8 @@
     <MESSAGE value="fixed admin and stuff" />
     <MESSAGE value="some very minor changes to the workspace settings, database committs" />
     <MESSAGE value="added base_generic.html file, modified idex.html to use it" />
-    <option name="LAST_COMMIT_MESSAGE" value="added base_generic.html file, modified idex.html to use it" />
+    <MESSAGE value="- added base_generic.html file, modified index.html to use it&#10;- modified the models to better reflect the season" />
+    <option name="LAST_COMMIT_MESSAGE" value="- added base_generic.html file, modified index.html to use it&#10;- modified the models to better reflect the season" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/EpicScoutPY$manage.coverage" NAME="manage Coverage Results" MODIFIED="1564249559822" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../EpicScoutPY - Copy" />
@@ -568,13 +613,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/scout/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="30" selection-start-column="30" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/db/models/fields/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="242">
@@ -621,7 +659,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scout/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="401">
+        <state relative-caret-position="172">
           <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
@@ -629,10 +667,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/scout/base_generic.html">
+    <entry file="file://$PROJECT_DIR$/templates/base_generic.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="20" lean-forward="true" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
+        <state relative-caret-position="356">
+          <caret line="32" column="10" selection-start-line="32" selection-start-column="10" selection-end-line="32" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/scout/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="52" lean-forward="true" selection-start-line="8" selection-start-column="52" selection-end-line="8" selection-end-column="52" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#body#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
