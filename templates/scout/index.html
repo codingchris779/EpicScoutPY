@@ -1,14 +1,20 @@
 {% extends "base_generic.html" %}
-<body>
-<form action="" method="post">
-    {% csrf_token %}
-    {{ form }}
-    <input type="submit" value="Submit">
-</form>
+
+{% block content %}
+
+<div class="w3-container" style="margin-top: 55px; margin-bottom: 15px;">
 
 <div class="w3-card-2 w3-padding-large w3-margin-large">
     <h1>Welcome!</h1>
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" value="Submit">
+    </form>
 </div>
 
-<div class="w3-round w3-orange w3-bottom w3-right" style="width: 15px; height: 15px;">+</div>
-</body>
+    <button class="w3-circle w3-right w3-btn w3-orange w3-margin-large w3-padding-large">+</button>
+
+</div>
+
+{% endblock %}
