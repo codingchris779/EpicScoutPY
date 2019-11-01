@@ -13,7 +13,7 @@ class Team(models.Model):
 
 # Create your models here.
 class Info(models.Model):
-    Team = models.OneToOneField(Team, on_delete=models.CASCADE, primary_key=False, null=False)
+    TeamId = models.IntegerField
     MatchNum = models.IntegerField
     isRed = models.fields.BooleanField
 
