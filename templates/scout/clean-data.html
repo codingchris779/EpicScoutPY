@@ -1,12 +1,10 @@
-<!DOCTYPE html>
+{% extends base_generic.html %}
+
 {% load render_table from django_tables2 %}
 {% load static %}
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" href="{% static
-'ticket/static/css/screen.css' %}" />
+{% block title %}
+    <title>Clean Datasheet</title>
+{% endblock %}
 </head>
 <body>
     {% render_table matches %}
