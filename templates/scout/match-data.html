@@ -1,15 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+{% extends base_generic.html %}
+
+{% load render_table from django_tables2 %}
+{% load static %}
+{% block title %}
+    <title>Matches Datasheet</title>
+{% endblock %}
 </head>
 <body>
-<form action="" method="post">
-    {% csrf_token %}
-    {{ form }}
-    <input type="submit" value="Submit">
-</form>
-
+    {% render_table matches %}
 </body>
 </html>

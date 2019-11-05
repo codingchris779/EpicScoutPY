@@ -26,5 +26,6 @@ urlpatterns = [
     path('match-data/<str:comp>/<int:info>/', views.match_data, name='match_data'),
     path('matches/', views.matches_for_view, name='matches'),
     path('clean-matches/', views.clean_matches_for_view, name='clean_matches'),
+    path('skystone-form.html/', views.SkystoneMatch, name='scout_match'),
 
 ]

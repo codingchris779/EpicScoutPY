@@ -10,7 +10,7 @@ from .models import Info, Team, Match, SkystoneMatch
 from .forms import InfoForm, MatchForm
 
 
-def match_data(request,comp, info):
+def skystone_match_data(request,comp, info):
     if request.method == 'POST':
         form = MatchForm(request.POST)
         if form.is_valid():
@@ -33,7 +33,7 @@ def match_data(request,comp, info):
             return HttpResponseRedirect('/')
     else:
         form = MatchForm()
-    return render(request, 'scout/match-data.html', {'form': form})
+    return render(request, 'scout/.html', {'form': form})
 
 
 def index(request):
@@ -53,11 +53,11 @@ def index(request):
 
 def matches_for_view(request):
     matches = SkystoneMatch.objects.all()
-    return render(request, 'scout/matches.html', {'matches': matches})
+    return render(request, 'scout/match-data.html', {'matches': matches})
 
 
 def clean_matches_for_view(request):
     matches = SkystoneMatch.objects.all()
-    return render(request, 'scout/matches.html', {'matches': matches})
+    return render(request, 'scout/match-data.html', {'matches': matches})
 
 
