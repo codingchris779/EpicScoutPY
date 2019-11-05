@@ -1,0 +1,100 @@
+{% extends "base_generic.html" %}
+{% block title %}
+<title>Scout Match | 19-20 FTC Season</title>
+{% endblock %}
+
+
+{% block content %}
+<div class="w3-card-2 w3-padding-large w3-margin-large">
+    <h1>Scout a Match</h1>
+    <p>FTC 19-20 SkyStone Season</p>
+    <p>Competition: {{ competition }}</p>
+</div>
+<div class="w3-container">
+    <div class="w3-card-2 w3-padding w3-section">
+    <div class="w3-container w3-blue">
+        <h2><strong>Match Data</strong></h2>
+    </div>
+    <form class="w3-container">
+        {% csrf_token %}
+        {{ form }}
+        <label>Info</label>
+        <input class="w3-input" type="text">
+
+        <label>Match Number</label>
+        <input class="w3-input" type="number">
+    </form>
+    </div>
+
+    <div class="w3-card-2 w3-padding w3-section">
+    <div class="w3-container w3-blue">
+        <h2><strong>Autonomous</strong></h2>
+    </div>
+    <form class="w3-container">
+        {% csrf_token %}
+        {{ form }}
+        <label>Skystones Across</label>
+        <input class="w3-input" type="number">
+
+        <label>Stones Across</label>
+        <input class="w3-input" type="number">
+
+        <label>First 2 Stones Across</label>
+        <input class="w3-input" type="radio">
+
+        <label>Parking</label>
+        <input class="w3-input" type="radio">
+    </form>
+    </div>
+
+    <div class="w3-card-2 w3-padding w3-section">
+    <div class="w3-container w3-blue">
+        <h2><strong>Tele-Op</strong></h2>
+    </div>
+    <form class="w3-container">
+        {% csrf_token %}
+        {{ form }}
+        <label>Stones Across</label>
+        <input class="w3-input" type="number">
+
+        <label>Stones Placed</label>
+        <input class="w3-input" type="number">
+
+        <label>Tallest Stack</label>
+        <input class="w3-input" type="number">
+    </form>
+    </div>
+
+    <div class="w3-card-2 w3-padding w3-section">
+    <div class="w3-container w3-blue">
+        <h2><strong>Endgame</strong></h2>
+    </div>
+    <form class="w3-container">
+        {% csrf_token %}
+        {{ form }}
+        <label>Team Marker Height</label>
+        <input class="w3-input" type="number">
+
+        <label>Parking</label>
+        <input class="w3-input" type="radio">
+    </form>
+    </div>
+
+    <div class="w3-card-2 w3-padding w3-section">
+    <div class="w3-container w3-blue">
+        <h2><strong>Post Match</strong></h2>
+    </div>
+    <form class="w3-container">
+        {% csrf_token %}
+        {{ form }}
+        <label>Comments</label>
+        <input class="w3-input" type="text">
+
+        <label>Did they break for more than 15 seconds?</label>
+        <input class="w3-input" type="radio" name="True">
+        <input class="w3-input" type="radio" name="False">
+    </form>
+    </div>
+</div>
+
+{% endblock %}
