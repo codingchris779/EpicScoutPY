@@ -1,15 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-<form action="" method="post">
-    {% csrf_token %}
-    {{ form }}
-    <input type="submit" value="Submit">
-</form>
+{% extends "base_generic.html" %}
 
-</body>
-</html>
+{% load render_table from django_tables2 %}
+{% load static %}
+{% block title %}
+    {{matches}}[0].teamNumber
+    <title>Match Data</title>
+{% endblock %}
+
+{% block content %}
+<div class="w3-card-2">
+    <p>Match Data Tables (Raw)</p>
+</div>
+{% endblock %}

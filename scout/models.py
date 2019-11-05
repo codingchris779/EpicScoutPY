@@ -27,12 +27,16 @@ class SkystoneMatch(models.Model):
 
     AUTO_Stones_Across = models.IntegerField(default='0')
     AUTO_SS_Across = models.IntegerField(default='0')
+    # AUTO_FirstStones = Which stones count for the first 2 bonus?
     AUTO_Parking = models.BooleanField(default=False)
+
     Stones_Across = models.IntegerField(default='0', help_text="Enter total (including auto) number of stones moved.")
     Stones_Placed = models.IntegerField(default='0')
     Tallest_Stack = models.IntegerField(default='0')
+
     END_TM_Height = models.IntegerField(default='0')
     END_Parking = models.BooleanField(default=False)
+
     Broken_Time = models.IntegerField(default='0', null=True, blank=True)
     Comments = models.CharField(max_length=500, default='n/a')
 

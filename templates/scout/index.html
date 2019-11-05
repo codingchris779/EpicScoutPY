@@ -2,19 +2,28 @@
 
 {% block content %}
 
-<div class="w3-container" style="margin-top: 55px; margin-bottom: 15px;">
-
 <div class="w3-card-2 w3-padding-large w3-margin-large">
-    <h1>Welcome!</h1>
-    <form action="" method="post">
-        {% csrf_token %}
-        {{ form }}
-        <input type="submit" value="Submit">
-    </form>
+<div class="w3-cell-row">
+    <div class="w3-container w3-cell w3-mobile">
+    <h1 class="w3-center">Loveland Robotics Scouting</h1>
+    <p class="w3-center">A homebrew scouting app for the 19-20 Skystone Season.</p>
+    <div class="w3-center">
+        <a class="w3-button w3-round-xxlarge w3-margin-top w3-white w3-border w3-border-blue" href="skystone-form.html/Newark/">Scout a Match</a>
+        <a class="w3-button w3-round-xxlarge w3-margin-top w3-white w3-border w3-border-cyan">Login</a>
+        <a class="w3-button w3-round-xxlarge w3-margin-top w3-white w3-border w3-border-aqua">See Data</a>
+    </div>
+    </div>
+
+    <div class="w3-container w3-cell w3-mobile">
+        <h3 class="w3-center">Recent Matches</h3>
+        <!-- TODO: Add a 'recent matches' table that updates with django magic -->
+        <form action="" method="post">
+            {% csrf_token %}
+            {{ form }}
+            <input type="submit" value="Submit" class="w3-input">
+        </form>
+    </div>
 </div>
-
-    <button class="w3-circle w3-right w3-btn w3-orange w3-margin-large w3-padding-large">+</button>
-
 </div>
 
 {% endblock %}

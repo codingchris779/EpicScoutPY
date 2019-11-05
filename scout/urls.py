@@ -24,7 +24,8 @@ urlpatterns = [
     path('', views.index, name='index'),
     # ex: /match-data/Newark/5/
     path('match-data/<str:comp>/<int:info>/', views.match_data, name='match_data'),
+    path('analysis/', views.matches_for_view, name='analysis'),
     path('matches/', views.matches_for_view, name='matches'),
-    path('clean-matches/', views.clean_matches_for_view, name='clean_matches'),
+    path('skystone-form.html/<str:comp>/', views.SkystoneMatch, name='scout_match'),
 
 ]
