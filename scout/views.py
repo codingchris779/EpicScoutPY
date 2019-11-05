@@ -51,12 +51,12 @@ def index(request):
     return render(request, 'scout/index.html', {'form': form})
 
 
-def matches_for_view(request):
+def match_data_for_view(request):
     matches = SkystoneMatch.objects.all()
     return render(request, 'scout/match-data.html', {'matches': matches})
 
 
-def clean_matches_for_view(request):
+def analysis_for_view(request):
     matches = SkystoneMatch.objects.all()
     return render(request, 'scout/match-data.html', {'matches': matches})
 
