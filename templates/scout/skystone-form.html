@@ -5,19 +5,20 @@
 
 
 {% block content %}
-<div class="w3-card-2 w3-padding-large w3-margin-large">
+<div class="w3-container">
+
+<div class="w3-cell-row w3-section w3-card-2 w3-mobile">
+<div class="w3-padding-large w3-margin w3-cell w3-mobile">
     <h1>Scout a Match</h1>
     <p>FTC 19-20 SkyStone Season</p>
     <p>Competition: {{ competition }}</p>
 </div>
-<div class="w3-container">
-    <div class="w3-card-2 w3-padding w3-section">
+<div class="w3-padding w3-margin w3-cell w3-mobile">
     <div class="w3-container w3-blue">
         <h2><strong>Match Data</strong></h2>
     </div>
     <form class="w3-container">
         {% csrf_token %}
-        {{ form }}
         <label>Info</label>
         <input class="w3-input" type="text">
 
@@ -25,14 +26,16 @@
         <input class="w3-input" type="number">
     </form>
     </div>
+</div>
 
-    <div class="w3-card-2 w3-padding w3-section">
+
+<div class="w3-cell-row w3-section w3-card-2 w3-mobile">
+    <div class="w3-padding w3-margin w3-cell w3-mobile">
     <div class="w3-container w3-blue">
         <h2><strong>Autonomous</strong></h2>
     </div>
     <form class="w3-container">
         {% csrf_token %}
-        {{ form }}
         <label>Skystones Across</label>
         <input class="w3-input" type="number">
 
@@ -47,13 +50,12 @@
     </form>
     </div>
 
-    <div class="w3-card-2 w3-padding w3-section">
+    <div class="w3-padding w3-margin w3-cell w3-mobile">
     <div class="w3-container w3-blue">
         <h2><strong>Tele-Op</strong></h2>
     </div>
     <form class="w3-container">
         {% csrf_token %}
-        {{ form }}
         <label>Stones Across</label>
         <input class="w3-input" type="number">
 
@@ -64,14 +66,16 @@
         <input class="w3-input" type="number">
     </form>
     </div>
+</div>
 
-    <div class="w3-card-2 w3-padding w3-section">
+
+<div class="w3-cell-row w3-section w3-card-2 w3-mobile">
+    <div class="w3-padding w3-margin w3-cell w3-mobile">
     <div class="w3-container w3-blue">
         <h2><strong>Endgame</strong></h2>
     </div>
     <form class="w3-container">
         {% csrf_token %}
-        {{ form }}
         <label>Team Marker Height</label>
         <input class="w3-input" type="number">
 
@@ -80,13 +84,12 @@
     </form>
     </div>
 
-    <div class="w3-card-2 w3-padding w3-section">
+    <div class="w3-padding w3-margin w3-cell w3-mobile">
     <div class="w3-container w3-blue">
         <h2><strong>Post Match</strong></h2>
     </div>
     <form class="w3-container">
         {% csrf_token %}
-        {{ form }}
         <label>Comments</label>
         <input class="w3-input" type="text">
 
@@ -94,6 +97,7 @@
         <input class="w3-input" type="radio" name="True">
         <input class="w3-input" type="radio" name="False">
     </form>
+    </div>
     </div>
 </div>
 

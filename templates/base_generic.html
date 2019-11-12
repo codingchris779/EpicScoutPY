@@ -15,22 +15,23 @@
 </head>
 <body>
 
-    <div class="w3-top">
-        <div class="w3-bar w3-orange">
-            <a href=""
-               class="w3-bar-item w3-button w3-padding-medium">
-                <strong>LR SCOUTING</strong>
-            </a>
-            <a href=""
-               class="w3-bar-item w3-button w3-padding-medium">
-                DATA
-            </a>
-            <a href=""
-               class="w3-bar-item w3-button w3-padding-medium w3-right">
-                LOGIN
-            </a>
-        </div>
+<div class="w3-top">
+    <div class="w3-bar w3-orange">
+        <button class="w3-button w3-bar-item w3-orange w3-hover-dark-grey" onclick="w3_open()">&#9776;</button>
+        <a href=""
+           class="w3-bar-item w3-button w3-padding-medium w3-hover-dark-grey">
+            <strong>LR SCOUTING</strong>
+        </a>
     </div>
+
+    <div class="w3-sidebar w3-bar-block w3-card-2 w3-animate-left" style="display:none" id="mySidebar">
+        <button onclick="w3_close()" class="w3-bar-item w3-button ">Close &times;</button>
+        <a href="#" class="w3-bar-item w3-button">Logged in as: <strong>username</strong></a> <!-- Account Page / Settings Page -->
+        <a href="#" class="w3-bar-item w3-button">Login</a>
+        <a href="#" class="w3-bar-item w3-button">Scout</a>
+        <a href="#" class="w3-bar-item w3-button">Data</a>
+    </div>
+</div>
 
     <div class="w3-container" style="margin-top: 55px; margin-bottom: 15px;">
     {% block content %}
@@ -38,4 +39,14 @@
     </div>
 
 </body>
+
+<script>
+    function w3_open() {
+        document.getElementById("mySidebar").style.display = "block";
+    }
+    function w3_close() {
+        document.getElementById("mySidebar").style.display = "none";
+    }
+</script>
+
 </html>
