@@ -1,0 +1,27 @@
+{% extends "base_generic.html" %}
+{% block title %}
+<title>Login | LR Scouting</title>
+{% endblock %}
+
+{% block content %}
+
+<div class="w3-container w3-card w3-padding">
+    <h2>Create an Account</h2>
+    <p>This will allow you to save your preferences and have more accountability.</p>
+    <form action="" method="post">
+        {% csrf_token %}
+        <label>Username</label>
+        <input class="w3-input" type="text">
+        <label>Password</label>
+        <input class="w3-input" type="password">
+        <label>Check Password</label>
+        <input class="w3-input" type="password">
+        <label>I am not a robot</label>
+        <input class="w3-input" type="checkbox">
+        <div class="w3-center" style="display=none">
+            <input type="submit" value="Create Account" class="w3-button w3-round-xxlarge w3-section w3-white w3-border w3-border-orange w3-center">
+        </div>
+    </form>
+</div>
+
+{% endblock %}

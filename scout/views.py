@@ -51,6 +51,12 @@ def index(request):
     return render(request, 'scout/index.html', {'form': form})
 
 
+def login(request):
+    return render(request, 'scout/login.html', {})
+
+def signup(request):
+    return render(request, 'scout/new-account.html', {})
+
 def matches_for_view(request):
     matches = SkystoneMatch.objects.all()
     return render(request, 'scout/match-data.html', {'matches': matches})

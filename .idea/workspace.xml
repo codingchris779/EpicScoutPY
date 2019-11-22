@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9b11f1dd-77e9-4f9e-96be-148cd3d57593" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/templates/scout/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/scout/new-account.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scout/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/scout/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/scout/skystone-form.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/scout/skystone-form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scout/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/scout/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scout/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/scout/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -316,7 +317,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573564419021</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Changed the SkystoneForm.html file (added a submit button and full-page form) and continued tweaking the models.py file">
+      <created>1574389152887</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1574389152887</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -378,7 +386,8 @@
     <MESSAGE value="Changed the organizations and content of the html files" />
     <MESSAGE value="Changed base generic to style html better and edited views and urls to not crash on run (they still can't handle anything else than index.html tho)" />
     <MESSAGE value="Added a sidebar for easy navigation on mobile and large screens" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added a sidebar for easy navigation on mobile and large screens" />
+    <MESSAGE value="Changed the SkystoneForm.html file (added a submit button and full-page form) and continued tweaking the models.py file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed the SkystoneForm.html file (added a submit button and full-page form) and continued tweaking the models.py file" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/EpicScoutPY$manage.coverage" NAME="manage Coverage Results" MODIFIED="1564249559822" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../EpicScoutPY - Copy" />
