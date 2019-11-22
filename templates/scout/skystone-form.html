@@ -6,6 +6,8 @@
 
 {% block content %}
 <div class="w3-container">
+<form style="display=none" action="" method="post">
+{% csrf_token %}
 
 <div class="w3-cell-row w3-section w3-card-2 w3-mobile">
 <div class="w3-padding-large w3-section w3-cell w3-half w3-mobile">
@@ -17,14 +19,13 @@
     <div class="w3-container w3-blue">
         <h2><strong>Match Data</strong></h2>
     </div>
-    <form class="w3-container">
-        {% csrf_token %}
+    <div class="w3-container">
         <label>Info</label>
         <input class="w3-input" type="text">
 
         <label>Match Number</label>
         <input class="w3-input" type="number">
-    </form>
+    </div>
     </div>
 </div>
 
@@ -34,8 +35,7 @@
     <div class="w3-container w3-blue">
         <h2><strong>Autonomous</strong></h2>
     </div>
-    <form class="w3-container">
-        {% csrf_token %}
+    <div class="w3-container">
         <label>Skystones Across</label>
         <input class="w3-input" type="number">
 
@@ -47,15 +47,14 @@
 
         <label>Parking</label>
         <input class="w3-input" type="radio">
-    </form>
+    </div>
     </div>
 
     <div class="w3-padding w3-section w3-cell w3-half w3-mobile">
     <div class="w3-container w3-blue">
         <h2><strong>Tele-Op</strong></h2>
     </div>
-    <form class="w3-container">
-        {% csrf_token %}
+    <div class="w3-container">
         <label>Stones Across</label>
         <input class="w3-input" type="number">
 
@@ -64,7 +63,7 @@
 
         <label>Tallest Stack</label>
         <input class="w3-input" type="number">
-    </form>
+    </div>
     </div>
 </div>
 
@@ -74,31 +73,35 @@
     <div class="w3-container w3-blue">
         <h2><strong>Endgame</strong></h2>
     </div>
-    <form class="w3-container">
-        {% csrf_token %}
+    <div class="w3-container">
         <label>Team Marker Height</label>
         <input class="w3-input" type="number">
 
         <label>Parking</label>
         <input class="w3-input" type="radio">
-    </form>
+    </div>
     </div>
 
     <div class="w3-padding w3-section w3-cell w3-half w3-mobile">
     <div class="w3-container w3-blue">
         <h2><strong>Post Match</strong></h2>
     </div>
-    <form class="w3-container">
-        {% csrf_token %}
+    <div class="w3-container">
         <label>Comments</label>
         <input class="w3-input" type="text">
 
         <label>Did they break for more than 15 seconds?</label>
         <input class="w3-input" type="radio" name="True">
         <input class="w3-input" type="radio" name="False">
-    </form>
     </div>
     </div>
+</div>
+
+    <div class="w3-card w3-center">
+        <input type="submit" value="Submit" class="w3-button w3-round-xxlarge w3-section w3-white w3-border w3-border-orange w3-center">
+    </div>
+
+</form>
 </div>
 
 {% endblock %}

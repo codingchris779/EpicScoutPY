@@ -18,7 +18,7 @@ class Info(models.Model):
     isRed = models.fields.BooleanField
 
     def __str__(self):
-        return "Hi!"
+        return str(self.MatchNum)
 
 
 class SkystoneMatch(models.Model):
@@ -27,7 +27,10 @@ class SkystoneMatch(models.Model):
 
     AUTO_Stones_Across = models.IntegerField(default='0')
     AUTO_SS_Across = models.IntegerField(default='0')
-    # AUTO_FirstStones = Which stones count for the first 2 bonus?
+    STONES = (('Skystone', 'Skystone'), ('Stone', 'Stone'), ('none', 'None'))
+    AUTO_FirstAcross = models.CharField(choices=[('2:0', '2 Skystones'), ('0:2', '2 Stones'), ('1:1', '1 Of Each'),
+                                                   ('1:0', 'One Skystone'), ('0:1', 'One Stone'), ('0:0', 'None')],
+                                        max_length=1)
     AUTO_Parking = models.BooleanField(default=False)
 
     Stones_Across = models.IntegerField(default='0', help_text="Enter total (including auto) number of stones moved.")
