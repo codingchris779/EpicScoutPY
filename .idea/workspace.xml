@@ -2,11 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9b11f1dd-77e9-4f9e-96be-148cd3d57593" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/scout/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/scout/new-account.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/registration/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/registration/logout.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/registration/password_reset_complete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/registration/password_reset_confirm.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/registration/password_reset_done.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/registration/password_reset_email.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/registration/password_reset_form.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EpicScoutPY/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/EpicScoutPY/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EpicScoutPY/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/EpicScoutPY/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scout/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/scout/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scout/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/scout/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base_generic.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base_generic.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scout/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scout/new-account.html" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -324,7 +335,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574389152887</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Added signup and login pages, but they don't have full functionality yet">
+      <created>1574428874731</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1574428874731</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -387,7 +405,8 @@
     <MESSAGE value="Changed base generic to style html better and edited views and urls to not crash on run (they still can't handle anything else than index.html tho)" />
     <MESSAGE value="Added a sidebar for easy navigation on mobile and large screens" />
     <MESSAGE value="Changed the SkystoneForm.html file (added a submit button and full-page form) and continued tweaking the models.py file" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed the SkystoneForm.html file (added a submit button and full-page form) and continued tweaking the models.py file" />
+    <MESSAGE value="Added signup and login pages, but they don't have full functionality yet" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added signup and login pages, but they don't have full functionality yet" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/EpicScoutPY$manage.coverage" NAME="manage Coverage Results" MODIFIED="1564249559822" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../EpicScoutPY - Copy" />

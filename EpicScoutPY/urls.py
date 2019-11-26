@@ -6,4 +6,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('scout/', include('scout.urls')),
     path('', RedirectView.as_view(url='/scout/', permanent=True)),
+    path('accounts/', include('django.contrib.auth.urls')),
 ]
