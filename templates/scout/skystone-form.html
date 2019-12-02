@@ -6,7 +6,7 @@
 
 {% block content %}
 <div class="w3-container">
-<form style="display=none" action="" method="post">
+<form style="display=none" action="/scout/skystone-results/html" method="post">
 {% csrf_token %}
 
 <div class="w3-cell-row w3-section w3-card-2 w3-mobile">
@@ -37,13 +37,13 @@
     </div>
     <div class="w3-container">
         <label>Skystones Across</label>
-        <input class="w3-input" type="number">
+        <input class="w3-input" type="number" value="0">
 
         <label>Stones Across</label>
-        <input class="w3-input" type="number">
+        <input class="w3-input" type="number" value="0">
 
-        <label>First 2 Stones Across</label>
-        <input class="w3-input" type="radio">
+        <label>First Skystones Across</label>
+        <input class="w3-input" type="number" value="0">
 
         <label>Parking</label>
         <input class="w3-input" type="radio">
@@ -56,13 +56,13 @@
     </div>
     <div class="w3-container">
         <label>Stones Across</label>
-        <input class="w3-input" type="number">
+        <input class="w3-input" type="number" value="0">
 
         <label>Stones Placed</label>
-        <input class="w3-input" type="number">
+        <input class="w3-input" type="number" value="0">
 
         <label>Tallest Stack</label>
-        <input class="w3-input" type="number">
+        <input class="w3-input" type="number" value="0">
     </div>
     </div>
 </div>
@@ -75,7 +75,7 @@
     </div>
     <div class="w3-container">
         <label>Team Marker Height</label>
-        <input class="w3-input" type="number">
+        <input class="w3-input" type="number" value="0">
 
         <label>Parking</label>
         <input class="w3-input" type="radio">
@@ -92,7 +92,6 @@
 
         <label>Did they break for more than 15 seconds?</label>
         <input class="w3-input" type="radio" name="True">
-        <input class="w3-input" type="radio" name="False">
     </div>
     </div>
 </div>
