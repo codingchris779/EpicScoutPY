@@ -27,6 +27,7 @@ urlpatterns = [
     path('analysis/', views.matches_for_view, name='analysis'),
     path('matches/', views.matches_for_view, name='matches'),
     path('skystone-form.html/<str:comp>/', views.SkystoneMatch, name='scout_match'),
+    path('skystone-results.html/', views.SkystoneMatch, name='submit_page'),
 
     path('accounts/', include('django.contrib.auth.urls')),
 

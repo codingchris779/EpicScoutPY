@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9b11f1dd-77e9-4f9e-96be-148cd3d57593" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/scout/skystone-results.html" afterDir="false" />
+    <list default="true" id="9b11f1dd-77e9-4f9e-96be-148cd3d57593" name="Default Changelist" comment="Added a very small clean function">
+      <change afterPath="$PROJECT_DIR$/scout/templatetags/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scout/templatetags/myfilters.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scout/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/scout/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scout/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/scout/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scout/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/scout/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/scout/skystone-form.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/scout/skystone-form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/scout/skystone-results.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/scout/skystone-results.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -43,8 +47,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -69,10 +73,10 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/EpicScoutPY/__init__.py" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="fileTemplates" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -338,7 +342,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574733286722</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Made a forms class for each match, and a verification page">
+      <created>1575253281325</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1575253281325</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -403,7 +414,8 @@
     <MESSAGE value="Changed the SkystoneForm.html file (added a submit button and full-page form) and continued tweaking the models.py file" />
     <MESSAGE value="Added signup and login pages, but they don't have full functionality yet" />
     <MESSAGE value="Added authentication pages and modified the sidebar behaviour. Old signin pages have been removed." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added authentication pages and modified the sidebar behaviour. Old signin pages have been removed." />
+    <MESSAGE value="Made a forms class for each match, and a verification page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Made a forms class for each match, and a verification page" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/EpicScoutPY$manage.coverage" NAME="manage Coverage Results" MODIFIED="1564249559822" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../EpicScoutPY - Copy" />

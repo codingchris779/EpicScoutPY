@@ -8,10 +8,10 @@ class InfoForm(forms.Form):
     round = forms.IntegerField(min_value=1, max_value=150)
 
 class SkystoneForm(forms.Form):
-    matchNum = forms.IntegerField()
-    position = forms.ChoiceField()
-    teamNum = forms.IntegerField()
-    # teamName = forms.CharField() # make autofillable from above
+    PRE_matchNum = forms.IntegerField()
+    PRE_position = forms.ChoiceField()
+    PRE_teamNum = forms.IntegerField()
+    # PRE_teamName = forms.CharField() # make autofillable from above
 
     AUTO_StonesAcross = forms.IntegerField(max_value=6)
     AUTO_StonesPlaced = forms.IntegerField(max_value=AUTO_StonesAcross)
@@ -27,6 +27,9 @@ class SkystoneForm(forms.Form):
     
     POST_Comments = forms.Textarea()
     POST_Breakage = forms.BooleanField()
+
+    def clean(self):
+        cleaned_data = super(SkystoneForm, self).clean()
 
 
 class MatchForm(forms.Form):

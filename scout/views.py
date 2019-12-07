@@ -7,7 +7,7 @@ from django.http import Http404
 from django.shortcuts import get_object_or_404, render
 
 from .models import Info, Team, Match, SkystoneMatch
-from .forms import InfoForm, MatchForm
+from .forms import InfoForm, MatchForm, SkystoneForm
 
 
 def match_data(request,comp, info):
@@ -32,7 +32,7 @@ def match_data(request,comp, info):
             m.save()
             return HttpResponseRedirect('/')
     else:
-        form = MatchForm()
+        form = SkystoneForm()
     return render(request, 'scout/skystone-form.html', {'form': form, 'competition':comp})
 
 

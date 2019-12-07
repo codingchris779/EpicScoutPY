@@ -3,10 +3,11 @@
 <title>Scout Match | 19-20 FTC Season</title>
 {% endblock %}
 
+{% load myfilters %}
 
 {% block content %}
 <div class="w3-container">
-<form style="display=none" action="/scout/skystone-results/html" method="post">
+<form style="display=none" action="/scout/skystone-results.html/" method="post">
 {% csrf_token %}
 
 <div class="w3-cell-row w3-section w3-card-2 w3-mobile">
@@ -21,10 +22,10 @@
     </div>
     <div class="w3-container">
         <label>Info</label>
-        <input class="w3-input" type="text">
+        {{ form.PRE_matchNum|addclass:"w3-input" }}
 
         <label>Match Number</label>
-        <input class="w3-input" type="number">
+        {{ form.PRE_teamNum|addclass:"w3-input" }}
     </div>
     </div>
 </div>
